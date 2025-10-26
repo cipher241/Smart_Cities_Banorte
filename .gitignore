@@ -3,6 +3,33 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Archivo de secretos y credenciales (¡CRÍTICO!)
+.env
+
+# Directorios de salida, logs y cache
+docs/
+debug/
+analisis_generados/
+__pycache__/
+
+# Archivos de estado y logs de ejecución
+*.log
+procesados.json
+monitor_state.json
+retrain_trigger.flag
+
+# Archivos de dataset generados por el monitor
+training_vectors.json
+training_dataset.json
+
+# Archivos de salida
+salida_limpia.json
+results.csv
+
+# Entornos virtuales de Python
+venv/
+.venv/
+
 # User-specific files
 *.rsuser
 *.suo
