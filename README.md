@@ -1,10 +1,10 @@
 # Smart Cities Banorte
 
-Este repositorio contiene el proyecto "Smart Cities Banorte", una colección de recursos, demostradores y código de apoyo orientados a soluciones de ciudades inteligentes relacionadas con análisis de datos urbanos, conectividad IoT y visualización. El objetivo es reunir ejemplos, scripts y documentación que faciliten prototipos y pruebas de concepto aplicables a despliegues en entornos urbanos.
+Este repositorio contiene el proyecto "Smart Cities Banorte", una colección de recursos, bases de datos y código de apoyo orientados a soluciones de ciudades inteligentes relacionadas con análisis de datos urbanos, conectividad IoT y visualización. El objetivo es reunir ejemplos, scripts y documentación de servicios como agua, energía o transporte que faciliten pruebas de concepto aplicables a despliegues en entornos urbanos.
 
 ## Objetivos
 
-- Centralizar ejemplos y prototipos que muestren cómo integrar sensores urbanos y datos en tiempo real.
+- Hacer uso de analisis de datos mediante el uso de APIs con IAs para poder obtener conclusiones con su apoyo.
 - Proveer utilidades para procesamiento, normalización y visualización de datos urbanos.
 - Documentar arquitecturas y flujos de datos recomendados para soluciones de Smart Cities.
 
@@ -15,14 +15,12 @@ Este repositorio contiene el proyecto "Smart Cities Banorte", una colección de 
 - `dashboards/` — Plantillas y archivos para dashboards (Grafana, etc.).
 - `examples/` — Ejemplos y datasets de muestra.
 
-> Actualmente el repositorio contiene solo un `.gitignore`. Se recomienda añadir la estructura anterior y ejemplos concretos.
-
 ## Tecnologías (sugeridas)
 
-- Ingesta: MQTT, Kafka
-- Procesamiento: Python, Node.js, C++ (según necesidad)
-- Almacenamiento: InfluxDB, PostgreSQL
-- Visualización: Grafana, Kibana
+- Ingesta: Gemini API.
+- Procesamiento: Python, Node.js, 
+- Almacenamiento: Snowflake o PostgreSQL
+- Visualización: HTML, Javascript
 
 ## Cómo empezar (guía rápida)
 
@@ -31,7 +29,7 @@ Este repositorio contiene el proyecto "Smart Cities Banorte", una colección de 
    git clone https://github.com/cipher241/Smart_Cities_Banorte.git
 
 2. Crea la estructura de carpetas sugerida y agrega ejemplos en `examples/`.
-3. Añade un `README` en subcarpetas explicando cómo ejecutar cada ejemplo.
+
 
 ## Contribuir
 
@@ -41,8 +39,9 @@ Este repositorio contiene el proyecto "Smart Cities Banorte", una colección de 
 
 ## Licencia
 
-Por defecto, no se ha añadido una licencia. Si quieres abrir el proyecto para uso público, considera añadir una licencia como MIT o Apache-2.0.
+Se está considerando añadir una licencia como MIT o Apache-2.0.
 
 ## Contacto
 
-Para preguntas o acceso adicional, contacta al mantenedor del repositorio.
+Para preguntas o acceso adicional, contacta a los mantenedores del repositorio.
+
