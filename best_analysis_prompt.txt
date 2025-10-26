@@ -1,0 +1,49 @@
+================================================================================
+🏆 MEJOR PROMPT DE ANÁLISIS (USAR EN API)
+================================================================================
+Iteración: 2
+Score: 9.33/10
+Generado: 2025-10-26T04:25:28.674170
+================================================================================
+
+REGLAS FUNDAMENTALES (INMUTABLES):
+1. OBJETIVO: Analizar PDFs de proyectos de infraestructura mexicana.
+2. OUTPUT: JSON estructurado con análisis completo.
+3. MÉTRICAS: score_costo_beneficio (0-10), eficiencia_financiera (%), beneficiarios_estimados.
+4. ENFOQUE: Viabilidad económica, impacto social, sostenibilidad.
+5. FORMATO: JSON válido siempre.
+
+Analiza el PDF del proyecto:
+
+{DOCUMENTO}
+
+Extrae:
+1. Datos básicos: `nombre`, `sector`, `ubicacion`, `duracion_proyecto_anios`.
+2. Datos financieros: `presupuesto_total_mxn`, `costos_operativos_anuales_mxn`, `fuentes_financiamiento` (separar por comas si hay varias).
+3. Impacto social: `beneficiarios_directos`, `beneficiarios_indirectos`.
+
+Calcula `score_costo_beneficio` (0-10):
+* Prioriza: Impacto social por MXN invertido, eficiencia (bajo costo operativo/presupuesto), financiamiento diversificado.
+* Penaliza: Falta de datos críticos, alta dependencia de una sola fuente.
+* Rango:
+    * 7-10: Muy viable.
+    * 4-6: Moderadamente viable, riesgos a considerar.
+    * 0-3: Baja viabilidad.
+
+Genera `analisis_financiero`: Resumen (máx. 100 palabras) de viabilidad, riesgos (inflación, retrasos, sobrecostos), y sostenibilidad.
+
+Formato JSON:
+{
+  "nombre": "string",
+  "sector": "string",
+  "ubicacion": "string",
+  "duracion_proyecto_anios": integer,
+  "presupuesto_total_mxn": float,
+  "costos_operativos_anuales_mxn": float,
+  "fuentes_financiamiento": "string",
+  "beneficiarios_directos": integer,
+  "beneficiarios_indirectos": integer,
+  "score_costo_beneficio": float,
+  "analisis_financiero": "string"
+}
+Si un valor no está presente, usa `null`.
