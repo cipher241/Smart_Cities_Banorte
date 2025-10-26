@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banorte - Carga de bases de datos gubernamentales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+    <img src="Logo.png" alt="Banorte Logo" class="logo">
+    <h1>Plataforma de Carga de Datos Gubernamentales</h1>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor">
+    <section class="descripcion">
+      <p>Esta plataforma está destinada a <strong>organizaciones gubernamentales</strong> que deseen 
+      subir bases de datos en formato PDF relacionadas con los sectores de 
+      <span class="rojo">agua</span>, <span class="rojo">energía</span> o <span class="rojo">infraestructura</span>.</p>
+      <p>Por favor, complete la información solicitada y adjunte su archivo.</p>
+    </section>
+
+    <form class="formulario" id="uploadForm">
+      <!-- Tipo de servicio -->
+      <label for="tipo">Tipo de servicio:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Seleccione una opción</option>
+        <option value="agua">Agua</option>
+        <option value="energia">Energía</option>
+        <option value="infraestructura">Infraestructura</option>
+      </select>
+
+      <!-- Descripción -->
+      <label for="descripcion">Descripción del archivo:</label>
+      <input type="text" id="descripcion" name="descripcion" placeholder="Ejemplo: Datos de consumo energético 2025" required>
+
+      <!-- Archivo PDF -->
+      <label for="archivo">Seleccione un archivo PDF:</label>
+      <input type="file" id="archivo" name="archivo" accept=".pdf" required>
+
+      <!-- Botón -->
+      <button type="submit" class="btn-primario">Subir archivo</button>
+    </form>
+
+    <div id="mensaje"></div>
+  </main>
+
+  <footer class="pie">
+    <p>© 2025 Banorte. Plataforma exclusiva para dependencias gubernamentales.</p>
+  </footer>
+
+  <!-- VALIDACIÓN -->
+  <script>
+    const form = document.getElementById('uploadForm');
+    const mensaje = document.getElementById('mensaje');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const archivo = document.getElementById('archivo').files[0];
+      const tipo = document.getElementById('tipo').value;
+
+      if (!archivo) {
+        mensaje.textContent = "⚠️ Debe seleccionar un archivo PDF.";
+        mensaje.style.color = "#EB0029";
+        return;
+      }
+
+      if (archivo.type !== "application/pdf") {
+        mensaje.textContent = "❌ Solo se permiten archivos en formato PDF.";
+        mensaje.style.color = "#EB0029";
+        return;
+      }
+
+      if (!tipo) {
+        mensaje.textContent = "⚠️ Seleccione un tipo de servicio.";
+        mensaje.style.color = "#EB0029";
+        return;
+      }
+
+      mensaje.textContent = "✅ Archivo PDF cargado correctamente. En revisión.";
+      mensaje.style.color = "#323E48";
+    });
+  </script>
+</body>
+</html>
