@@ -8,12 +8,10 @@ Este repositorio contiene el proyecto "Smart Cities Banorte", una colección de 
 - Proveer utilidades para procesamiento, normalización y visualización de datos urbanos.
 - Documentar arquitecturas y flujos de datos recomendados para soluciones de Smart Cities.
 
-## Contenido (ejemplo)
+## Opt Ins
 
-- `docs/` — Documentación y diagramas arquitectónicos.
-- `src/` — Código fuente (microservicios, ingesta de datos, procesamiento).
-- `dashboards/` — Plantillas y archivos para dashboards (Grafana, etc.).
-- `examples/` — Ejemplos y datasets de muestra.
+- Gemini API: Hacemos uso de una API de Gemini para que consuma una gran cantidad de datos en una base de datos para poder analizarlos y generar conclusiones rapida e independientemente del usuario.
+- Snowflake: Utilizamos Snowflake de forma en la que cuando se sube un archivo de PDF a la página web, este archivo se envía a Snowflake donde se organizan y formatizan los datos, después se extrae el archivo formateado para que sea alimentado posteriormente a Gemini.
 
 ## Tecnologías (sugeridas)
 
