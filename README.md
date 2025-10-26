@@ -37,6 +37,9 @@ Este repositorio contiene el proyecto "Smart Cities Banorte", una colección de 
 - Crea ramas con prefijo `feature/` o `fix/` y envía pull requests hacia `main`.
 - Incluye pruebas mínimas y documentación para nuevas funcionalidades.
 
+#Documento SRS (En inglés)
+https://docs.google.com/document/d/1_rCxEN6-rxgDn4kplLef7FnRG-kruDJ6TOAKhkO70J8/edit?usp=sharing 
+
 ## Licencia
 
 Se está considerando añadir una licencia como MIT o Apache-2.0.
